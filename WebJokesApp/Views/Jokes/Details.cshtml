@@ -1,0 +1,31 @@
+﻿@model WebJokesApp.Models.Jokes
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-1">
+            @* @Html.DisplayNameFor(model => model.JokePergunta) *@
+            Então e
+        </dt>
+        <dd class = "col-sm-11">
+            @Html.DisplayFor(model => model.JokePergunta)
+        </dd>
+        <dt class = "col-sm-1">
+            @* @Html.DisplayNameFor(model => model.JokeResposta) *@
+            Ora pois
+        </dt>
+        <dd class = "col-sm-11">
+            @Html.DisplayFor(model => model.JokeResposta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar Atrás</a>
+</div>
